@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>我的自媒体主页</title>
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #faf9f8;
+            color: #1e1e1e;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* 头部区域 */
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid #ffffff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .name {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .bio {
+            font-size: 1.1rem;
+            color: #4a4a4a;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* 社交链接 */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: #1e1e1e;
+            background: #ffffff;
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            transition: all 0.2s;
+            border: 1px solid #e0e0e0;
+        }
+
+        .social-links a:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+        }
+
+        /* 文章/作品列表 */
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin: 2rem 0 1rem 0;
+            border-left: 4px solid #3b82f6;
+            padding-left: 0.75rem;
+        }
+
+        .post-list {
+            list-style: none;
+        }
+
+        .post-item {
+            background: white;
+            border-radius: 16px;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border: 1px solid #eaeaea;
+            transition: 0.2s;
+        }
+
+        .post-item:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+
+        .post-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .post-title a {
+            text-decoration: none;
+            color: #1e1e1e;
+        }
+
+        .post-title a:hover {
+            color: #3b82f6;
+        }
+
+        .post-meta {
+            font-size: 0.85rem;
+            color: #6c6c6c;
+            margin-bottom: 0.75rem;
+        }
+
+        .post-excerpt {
+            color: #4a4a4a;
+        }
+
+        /* 页脚 */
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eaeaea;
+            font-size: 0.85rem;
+            color: #6c6c6c;
+        }
+
+        /* 手机优化 */
+        @media (max-width: 600px) {
+            body {
+                padding: 1.5rem 1rem;
+            }
+            .name {
+                font-size: 1.6rem;
+            }
+            .avatar {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部信息：头像、名字、简介 -->
+        <div class="header">
+            <!-- 头像：你可以替换成自己的图片链接（将图片放在同目录下，如 avatar.jpg） -->
+            < img class="avatar" src="avatar.jpg" alt="头像" onerror="this.src='https://via.placeholder.com/120?text=Avatar'">
+            <div class="name">你的名字</div>
+            <div class="bio">
+                自由创作者 / 分享生活与思考<br>
+                在这里记录我的所见所闻。
+            </div>
+        </div>
+
+        <!-- 社交链接 -->
+        <div class="social-links">
+            <a href=" ">微博</a >
+            <a href="#">小红书</a >
+            <a href="#">B站</a >
+            <a href="#">知乎</a >
+            <a href="#">即刻</a >
+        </div>
+
+        <!-- 最新文章 / 作品列表 -->
+        <div class="section-title">📝 最新分享</div>
+        <ul class="post-list">
+            <li class="post-item">
+                <div class="post-title"><a href="#">如何开始做一个个人网页？</a ></div>
+                <div class="post-meta">2025年3月31日 · 5分钟阅读</div>
+                <div class="post-excerpt">从零开始搭建你的第一个个人网站，完全免费，简单易懂……</div>
+            </li>
+            <li class="post-item">
+                <div class="post-title"><a href="#">我的自媒体之路：从0到1000粉丝</a ></div>
+                <div class="post-meta">2025年3月25日 · 8分钟阅读</div>
+                <div class="post-excerpt">分享我做自媒体的真实经历，踩过的坑和一些实用建议……</div>
+            </li>
+            <li class="post-item">
+                <div class="post-title"><a href="#">摄影作品集：街头光影</a ></div>
+                <div class="post-meta">2025年3月18日 · 6张图</div>
+                <div class="post-excerpt">一组近期街拍，捕捉城市里的瞬间情绪……</div>
+            </li>
+        </ul>
+
+        <!-- 页脚 -->
+        <div class="footer">
+            © 2025 你的名字 · 用 ❤️ 搭建于 GitHub Pages
+        </div>
+    </div>
+</body>
+</html>
